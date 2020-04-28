@@ -29,7 +29,7 @@ namespace SocialApp.API.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public async Task< IActionResult> GetValue(int id)
+        public async Task<IActionResult> GetValue(int id)
         {
            var myValues = await _context.Values.FirstOrDefaultAsync(x=>x.Id == id);
            return Ok(myValues);
